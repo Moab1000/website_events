@@ -1,0 +1,499 @@
+/** Menu*/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #00569e;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #3ea7fd;
+}
+
+/******** Mobile Menu *********/
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #00569e;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/********* forside mobil ************/
+
+.grid_1-3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+
+.find_knapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #00569e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.link:hover {
+  background-color: #3ea7fd;
+}
+
+.knap {
+  display: block;
+  padding: 3px 3px;
+  background-color: #00569e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.knap:hover {
+  background-color: #3ea7fd;
+}
+
+.grey {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sortboks {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hvidboks {
+  display: inline-block;
+  padding: 10px 100px;
+  background-color: #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.lukketboks {
+  display: inline-block;
+  padding: 0px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  margin: 5px 10px;
+  border: 2px solid #000000;
+}
+.mereknap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 20px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+}
+
+/********* om os mobil ************/
+.opretbrugger {
+  text-align: center;
+  display: block;
+  margin: 5px 154px;
+  padding: 5px 20px;
+  background-color: #ffffff;
+  color: #000000;
+
+  border-radius: 20px;
+
+  border: 2px solid #000000;
+}
+
+.h2midten {
+  text-align: center;
+}
+
+/********* Opret mobil side ************/
+
+/* blå boks */
+.opretboks {
+  background-color: #43caff;
+
+  padding: 15px;
+
+  margin: 20px;
+}
+
+/* tekst */
+.tekst {
+  color: #000000;
+
+  font-weight: bold;
+}
+
+/* små hvide bokse */
+.hvidboks {
+  background-color: white;
+
+  border: 2px solid black;
+
+  padding: 10px;
+
+  width: 300px;
+
+  color: grey;
+}
+
+/* stor tekst boks */
+.storhvidboks {
+  background-color: white;
+
+  border: 2px solid black;
+
+  height: 150px;
+
+  padding: 10px;
+
+  color: grey;
+}
+
+/* upload boks */
+.billedeboks {
+  background-color: white;
+
+  border: 2px solid black;
+
+  height: 140px;
+}
+
+/* kategori */
+.kategori {
+  background-color: white;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  width: 150px;
+}
+
+/* opret knap */
+
+.opretlink {
+  display: block;
+  width: 100px;
+  margin: auto;
+  text-align: center;
+
+  padding: 10px;
+  background-color: #00569e;
+  color: #ffffff;
+  text-decoration: none;
+
+  border-radius: 15px;
+}
+
+.opretlink:hover {
+  background-color: #3ea7fd;
+}
+.velkommen_video {
+  display: none;
+}
+
+.om_img {
+  display: none;
+}
+
+.medlems_img {
+  display: none;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/***Dekstop ***/
+
+@media (min-width: 800px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+  .grid_1-3 {
+    display: block;
+  }
+
+  .grid_1-3 img {
+    width: 100%;
+    height: auto;
+  }
+  .velkommen_video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+  }
+  .grid_1-1-1_events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .grid_1-4-6-1 {
+    display: grid;
+    grid-template-columns: 1fr 4fr 6fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .om_img {
+    display: block;
+  }
+
+  .om_img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .medlems_img {
+    display: block;
+  }
+
+  .medlems_img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+/****pop*****/
+/* 
+Jeg ved godt at man helst ikke ma bruge position,
+men jeg bruger det her, fordi popup ellers ikke virker rigtigt.
+
+Hvis jeg ikke bruger position, sa kommer popup bare der,
+hvor den star i HTML koden.
+
+Derfor bruger jeg position fixed,
+sa popup kan komme oven pa siden og sta i midten.
+*/
+
+.popop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  justify-content: center;
+  align-items: center;
+}
+
+.popop.vis {
+  display: flex;
+}
+
+.boks {
+  width: 80%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top img {
+  width: 40px;
+  height: auto;
+}
+
+.billede {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.faner {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.faner button {
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.fane {
+  display: none;
+  margin-top: 10px;
+}
+
+.om {
+  display: block;
+}
+
+.bund {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.del {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.del img {
+  width: 20px;
+  height: auto;
+}
+
+.anmeld_boks {
+  border: 1px solid #000000;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+/****om os***/
+
+.lukketblueboks {
+  display: inline-block;
+  padding: 0px 10px;
+  background-color: #43caff;
+  color: #000000;
+  border-radius: 5px;
+  margin: 5px 10px;
+  border: 2px solid #000000;
+}
+
+/**** footer*/
+.fodtext img {
+  width: 50px;
+  height: 50px;
+}
